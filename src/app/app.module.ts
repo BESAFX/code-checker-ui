@@ -16,6 +16,8 @@ import {ProfilesComponent} from './views/profiles/profiles.component';
 import {AdminComponent} from './views/admin/admin.component';
 import {MdlUpgradeElementsDirective} from './_directives/mdl-upgrade-elements.directive';
 import {CreateUpdateProjectComponent} from './views/projects/create-update-project/create-update-project.component';
+import {NgxSpinnerModule} from "ngx-spinner";
+import {SnotifyModule, SnotifyService, ToastDefaults} from 'ng-snotify';
 
 export function tokenGetter() {
   return sessionStorage.getItem('AuthToken');
@@ -38,17 +40,23 @@ export function tokenGetter() {
     BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
+    NgxSpinnerModule,
     NgbModule,
+    SnotifyModule,
     JwtModule.forRoot({
       config: {
         tokenGetter: tokenGetter
       }
     })
   ],
-  entryComponents:[
-      CreateUpdateProjectComponent
+  entryComponents: [
+    CreateUpdateProjectComponent
   ],
-  providers: [httpInterceptorProviders],
+  providers: [
+    httpInterceptorProviders,
+    {provide: 'SnotifyToastConfig', useValue: ToastDefaults},
+    SnotifyService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {
