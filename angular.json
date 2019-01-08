@@ -27,9 +27,17 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/font-awesome/scss/font-awesome.scss",
+              "node_modules/material-icons/iconfont/material-icons.scss",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/assets/css/mdl.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/chart.js/dist/Chart.js",
+              "node_modules/hammerjs/hammer.min.js",
+              "src/assets/js/material.min.js"
+            ]
           },
           "configurations": {
             "production": {
