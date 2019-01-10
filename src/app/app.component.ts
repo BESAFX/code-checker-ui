@@ -8,7 +8,6 @@ import {WebSocketService} from "./_services/web-socket.service";
 import {PushNotificationService} from "./_services/push-notification.service";
 import {Notification} from "./_model/Notification";
 
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
