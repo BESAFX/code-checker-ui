@@ -1,5 +1,5 @@
-<ngx-spinner [bdColor]="'rgba(51, 51, 51, 0.8)'" [size]="'large'" [color]="'#fff'" [type]="'ball-spin'">
-  <p class="text-white mt-5">Loading...</p>
+<ngx-spinner [bdColor]="'rgba(255,255,255)'" [size]="'large'" [color]="'#ffc709'" [type]="'ball-scale-multiple'">
+  <p class="mdl-color-text--primary-dark mt-5">Loading...</p>
 </ngx-spinner>
 
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
@@ -100,7 +100,7 @@
 
   </main>
 
-  <footer class="mdl-mini-footer fixed-bottom mdl-color--primary-dark">
+  <footer (click)="push()" class="mdl-mini-footer fixed-bottom mdl-color--primary-dark">
 
     <span class="text-center py-3">© 2018 Copyright: Code Checker. All Rights Reserved</span>
 
