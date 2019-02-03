@@ -1,15 +1,10 @@
 pipeline {
-  agent {
-    node {
-      label 'ng'
+    agent { docker { image 'node:latest' } }
+    stages {
+        stage('build') {
+            steps {
+                sh 'npm --version'
+            }
+        }
     }
-
-  }
-  stages {
-    stage('start') {
-      steps {
-        sh 'ng s -o'
-      }
-    }
-  }
 }
