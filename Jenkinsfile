@@ -1,9 +1,9 @@
 pipeline {
     agent { dockerfile true }
     stages {
-        stage('build') {
+        stage('Message') {
             steps {
-                sh 'npm --version'
+                echo 'Build Angular Successfully'
             }
         }
     }
