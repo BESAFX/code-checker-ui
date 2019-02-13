@@ -1,9 +1,12 @@
 pipeline {
-    agent { dockerfile true }
+    agent none
     stages {
-        stage('Message') {
+        stage('Build Angaular') {
+            agent { docker 'node:latest'}
             steps {
-                echo 'Build Angular Successfully'
+                echo 'Fetch dependencies'
+                sh 'npm -version'
+                sh 'npm install'
             }
         }
     }
