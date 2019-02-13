@@ -11,7 +11,19 @@ pipeline {
             steps {
                 echo 'Fetch dependencies'
                 sh 'npm -version'
-                sh 'npm install'
+                sh 'npm install -g @angular/cli && npm install && npm audit fix'
+            }
+        }
+        stage('Running Servcer') {
+            agent { 
+                docker {
+                    image 'node:latest'
+                    args '-u root:root'
+                }
+            }
+            steps {
+                echo 'Start Server on Port 4200'
+                sh 'npm start'
             }
         }
     }
