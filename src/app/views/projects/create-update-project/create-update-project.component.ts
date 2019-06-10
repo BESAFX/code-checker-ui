@@ -1,8 +1,8 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {NgbActiveModal} from "@ng-bootstrap/ng-bootstrap";
-import {ApiService} from "../../../_services/api.service";
-import {Project} from "../../../_model/project";
-import {NotifyService} from "../../../_services/notify.service";
+import {NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
+import {ApiService} from '../../../_services/api.service';
+import {Project} from '../../../_model/project';
+import {NotifyService} from '../../../_services/notify.service';
 
 @Component({
   selector: 'app-create-update-project',
@@ -14,7 +14,7 @@ export class CreateUpdateProjectComponent implements OnInit {
   @Input() name;
 
   form: any = {};
-  disabled: boolean = false;
+  disabled = false;
   submitted = false;
   private project: Project;
 
@@ -49,7 +49,7 @@ export class CreateUpdateProjectComponent implements OnInit {
     this.api.createProject(this.project).subscribe(
       data => {
         this.notify.onSuccess('Projects', 'Project Created Successfully');
-        this.disabled = false
+        this.disabled = false;
       },
       error => {
         this.disabled = false;

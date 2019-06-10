@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {NgbModal} from "@ng-bootstrap/ng-bootstrap";
-import {CreateUpdateProjectComponent} from "./create-update-project/create-update-project.component";
+import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
+import {CreateUpdateProjectComponent} from './create-update-project/create-update-project.component';
 
 @Component({
   selector: 'app-projects',
@@ -17,7 +17,7 @@ export class ProjectsComponent implements OnInit {
 
   createProject() {
     const modalRef = this.modalService.open(CreateUpdateProjectComponent, {
-      backdrop: "static",
+      backdrop: 'static',
       centered: false,
       keyboard: false
     });

@@ -2,11 +2,11 @@ import {Component, OnInit} from '@angular/core';
 import {NavigationCancel, NavigationEnd, NavigationError, NavigationStart, Router, RouterEvent} from '@angular/router';
 import {TokenStorageService} from './auth/token-storage.service';
 import {MdlUpgradeElementsDirective} from './_directives/mdl-upgrade-elements.directive';
-import {NgxSpinnerService} from "ngx-spinner";
+import {NgxSpinnerService} from 'ngx-spinner';
 import Timeout from 'await-timeout';
-import {WebSocketService} from "./_services/web-socket.service";
-import {PushNotificationService} from "./_services/push-notification.service";
-import {Notification} from "./_model/Notification";
+import {WebSocketService} from './_services/web-socket.service';
+import {PushNotificationService} from './_services/push-notification.service';
+import {Notification} from './_model/Notification';
 
 @Component({
   selector: 'app-root',

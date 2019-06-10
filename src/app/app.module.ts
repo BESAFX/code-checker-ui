@@ -16,7 +16,7 @@ import {ProfilesComponent} from './views/profiles/profiles.component';
 import {AdminComponent} from './views/admin/admin.component';
 import {MdlUpgradeElementsDirective} from './_directives/mdl-upgrade-elements.directive';
 import {CreateUpdateProjectComponent} from './views/projects/create-update-project/create-update-project.component';
-import {NgxSpinnerModule} from "ngx-spinner";
+import {NgxSpinnerModule} from 'ngx-spinner';
 import {SnotifyModule, SnotifyService, ToastDefaults} from 'ng-snotify';
 
 export function tokenGetter() {
